@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Store>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<hr/>
+<table class="table table-bordered">
+        <tr>
+            <td> StoreId   </td>
+            <td> StoreName </td>
+            <td> Address   </td>
+        </tr>
+        @foreach(var item in Model){
+            <tr>
+                <td>@item.StoreId</td>
+                <td>@item.StoreName</td>
+                <td>@item.Address</td>
+            </tr>
+        }
+    </table>
+

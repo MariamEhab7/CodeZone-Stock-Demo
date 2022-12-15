@@ -1,0 +1,13 @@
+﻿@model Store
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+<hr />
+<form method="post" class="form-group m-3">
+    <input asp-for="StoreName" placeholder="StoreName" /> <span asp-validation-for="StoreName"></span> <br />
+    <input asp-for="Address" placeholder="Address" /><span asp-validation-for="Address"></span><br />
+
+    <input class="btn btn-success mt-3" type="submit" value="ADD" />
+</form>

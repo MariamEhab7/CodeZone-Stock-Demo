@@ -1,0 +1,14 @@
+﻿@model Item
+@{
+    ViewData["Title"] = "edit";
+}
+
+<h1>Edit</h1>
+<hr />
+
+<form method="post">
+    <input asp-for="ItemName" placeholder="Name" />
+    <input asp-for="Quantity" placeholder="Quantity" />
+    <input asp-for="Price" placeholder="Price" />
+    <input class="btn btn-success" type="submit" value="Apply Changes" />
+</form>
