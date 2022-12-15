@@ -55,7 +55,7 @@ namespace StockProject.Controllers
         }
 
         [HttpGet]
-        public IActionResult DeleteStudent(int id)
+        public IActionResult Delete(int id)
         {
             Item itm = _db.Items.FirstOrDefault(i => i.Id == id);
             _db.Items.Remove(itm);

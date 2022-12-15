@@ -31,5 +31,30 @@ namespace StockProject.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public IActionResult edit(int? id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult edit(Store str, int id)
+        {
+            Store oldStore = _db.Stores.FirstOrDefault(i => i.StoreId == id);
+            oldStore.StoreName = str.StoreName;
+            oldStore.Address = str.Address;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Store store = _db.Stores.FirstOrDefault(i => i.StoreId == id);
+            _db.Stores.Remove(store);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

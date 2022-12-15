@@ -3,7 +3,7 @@
     ViewData["Title"] = "edit";
 }
 
-<h1>Edit</h1>
+<h1>Edit Item</h1>
 <hr />
 
 <form method="post">
@@ -11,4 +11,6 @@
     <input asp-for="Quantity" placeholder="Quantity" />
     <input asp-for="Price" placeholder="Price" />
     <input class="btn btn-success" type="submit" value="Apply Changes" />
+    <a href="@Url.Action("Index")" class="btn btn-success"> Back To Items </a>
+
 </form>

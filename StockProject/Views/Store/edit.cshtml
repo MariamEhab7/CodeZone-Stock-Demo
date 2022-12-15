@@ -1,0 +1,17 @@
+﻿@model Store
+@{
+    ViewData["Title"] = "edit";
+}
+
+
+<h1>Edit Store</h1>
+<hr />
+
+<form method="post">
+    <input asp-for="StoreName" placeholder="Name" />
+    <input asp-for="Address" placeholder="Address" />
+
+    <input class="btn btn-success" type="submit" value="Apply Changes" />
+    <a href="@Url.Action("Index")" class="btn btn-success"> Back To Stores </a>
+
+</form>
