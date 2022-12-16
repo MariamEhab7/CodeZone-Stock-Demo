@@ -8,12 +8,14 @@ namespace StockProject.Controllers
 {
     public class ItemController : Controller
     {
+        #region Dependancy injection
         private StockDB _db;
 
         public ItemController(StockDB db)
         {
             _db = db;
         }
+        #endregion
 
         public IActionResult Index()
         {
@@ -21,6 +23,7 @@ namespace StockProject.Controllers
             return View(_db.Items.Include(a=>a.Store).ToList());
         }
 
+        #region Add
         public IActionResult Add()
         {
             ViewBag.store = new SelectList(_db.Stores.ToList(), "StoreId", "StoreName");
@@ -36,7 +39,9 @@ namespace StockProject.Controllers
 
             return RedirectToAction("Index");
         }
+        #endregion
 
+        #region Edit
         [HttpGet]
         public IActionResult edit(int? id)
         {
@@ -53,7 +58,9 @@ namespace StockProject.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+        #endregion
 
+        #region Delete
         [HttpGet]
         public IActionResult Delete(int id)
         {
@@ -62,6 +69,7 @@ namespace StockProject.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+        #endregion
 
     }
 }

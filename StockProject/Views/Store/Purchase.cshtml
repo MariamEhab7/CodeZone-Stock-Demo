@@ -1,0 +1,20 @@
+﻿@model Item
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Store Details</h1>
+<hr />
+<form asp-action="getItem" class="form-group m-3">
+    <select asp-for="Id" Width="120px" BackColor="#F6F1DB" asp-items="ViewBag.itemm">
+        <span asp-validation-for="Id"></span>
+        <br />
+        <br />
+    </select>
+
+    <input asp-for="Quantity" placeholder="Quantity" />
+    <br>
+    <input type="submit" class="btn btn-success mt-3" value="Purchase this Item" />
+    <a asp-action="Index" asp-controller="Store" class="btn btn-success mt-3">Back to list</a>
+
+</form>
