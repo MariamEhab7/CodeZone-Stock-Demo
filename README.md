@@ -1,6 +1,6 @@
-# small stock project using
+# Small stock project
 
-ASP.NET MVC, Entity Framework, SQL
+Using: ASP.NET MVC, Entity Framework, SQL
 
 that can accomplish the following:
 
