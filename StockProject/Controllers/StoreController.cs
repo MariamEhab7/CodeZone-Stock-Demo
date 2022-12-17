@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StockProject.Data;
 using StockProject.Models;
-using System.Linq;
-using System.Text;
 
 namespace StockProject.Controllers
 {
@@ -89,11 +87,6 @@ namespace StockProject.Controllers
             }
         }
 
-        [HttpGet]
-        public IActionResult getItem(int? Id)
-        {
-            return View();
-        }
 
         [HttpPost]
         public IActionResult getItem(Item str, int id) // Getting selected item's quantity and add purchased quantity

@@ -25,7 +25,7 @@
                     @Html.ActionLink("Purchase", "Purchase", new { id = item.StoreId }, new { @class = "btn btn-dark me-3" })
 
                     @Html.ActionLink("Delete", "Delete", new { id = item.StoreId },
-                    new { onclick = "return confirm('Are sure wants to delete this item ?');",  
+                    new { onclick = "return confirm('Deleting this Store will delete all its items do you want to continue?');",  
                     @class = "btn btn-danger" })
 
                 </td>
