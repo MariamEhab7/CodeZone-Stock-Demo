@@ -11,7 +11,7 @@
     <input asp-for="StoreName" placeholder="Name" />
     <input asp-for="Address" placeholder="Address" />
 
-    <input class="btn btn-success" type="submit" value="Apply Changes" />
-    <a href="@Url.Action("Index")" class="btn btn-success"> Back To Stores </a>
+    <input class="btn btn-dark" type="submit" value="Apply Changes" onclick="return confirm ('Are you sure want to Edit Item?');" />
+    <a href="@Url.Action("Index")" class="btn btn-dark"> Back To Stores </a>
 
 </form>

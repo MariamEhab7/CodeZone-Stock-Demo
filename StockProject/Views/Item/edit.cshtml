@@ -10,7 +10,12 @@
     <input asp-for="ItemName" placeholder="Name" />
     <input asp-for="Quantity" placeholder="Quantity" />
     <input asp-for="Price" placeholder="Price" />
-    <input class="btn btn-success" type="submit" value="Apply Changes" />
-    <a href="@Url.Action("Index")" class="btn btn-success"> Back To Items </a>
+    <select asp-for="StoreId" asp-items="ViewBag.store">
+        <span asp-validation-for="StoreId"></span>
+        <br />
+        <br />
+    </select>
+    <input class="btn btn-dark" type="submit" value="Apply Changes" onclick="return confirm ('Are you sure want to Edit Item?');" />
+    <a href="@Url.Action("Index")" class="btn btn-dark"> Back To Items </a>
 
 </form>

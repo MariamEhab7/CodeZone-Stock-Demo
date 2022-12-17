@@ -17,11 +17,13 @@ namespace StockProject.Controllers
         }
         #endregion
 
+        #region Display "Index"
         public IActionResult Index()
         {
             //Eager loading
             return View(_db.Items.Include(a=>a.Store).ToList());
         }
+        #endregion
 
         #region Add
         public IActionResult Add()
@@ -45,6 +47,7 @@ namespace StockProject.Controllers
         [HttpGet]
         public IActionResult edit(int? id)
         {
+            ViewBag.store = new SelectList(_db.Stores.ToList(), "StoreId", "StoreName");
             return View();
         }
 
@@ -55,6 +58,7 @@ namespace StockProject.Controllers
             NewItem.ItemName = itm.ItemName;
             NewItem.Quantity = itm.Quantity;
             NewItem.Price = itm.Price;
+            NewItem.StoreId = itm.StoreId;
             _db.SaveChanges();
             return RedirectToAction("Index");
         }

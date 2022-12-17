@@ -18,10 +18,13 @@ namespace StockProject.Controllers
             _db = db;
         }
         #endregion
+
+        #region Display "Index"
         public IActionResult Index()
         {
             return View(_db.Stores.ToList());
         }
+        #endregion
 
         #region Add
         public IActionResult Add()
@@ -67,7 +70,8 @@ namespace StockProject.Controllers
         }
         #endregion
 
-        public IActionResult Purchase(int? id)
+        #region Purchase
+        public IActionResult Purchase(int? id) // Getting Items of specific store and send to a dropdown list
         {
             var itemsOfStore = _db.Items.Where(i => i.StoreId == id).ToList();
             ViewBag.itemm = new SelectList(itemsOfStore, "Id", "ItemName");
@@ -92,7 +96,7 @@ namespace StockProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult getItem(Item str, int id)
+        public IActionResult getItem(Item str, int id) // Getting selected item's quantity and add purchased quantity
         {
             var itemSelected = _db.Items.Include(i => i.Store).FirstOrDefault(t => t.Id == id);
             var oldQ = itemSelected.Quantity;
@@ -105,5 +109,6 @@ namespace StockProject.Controllers
             return RedirectToAction("Index");
         }
 
+        #endregion
     }
 }

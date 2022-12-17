@@ -17,8 +17,6 @@ namespace StockProject.Models
         [Required(ErrorMessage = "*")]
         public double Price { get; set; }
 
-       // public DateTime DateOfpurchase { get; set; } = DateTime.Now;
-
         [ForeignKey("Store")]
         public int StoreId { get; set; }
         public Store Store { get; set; }

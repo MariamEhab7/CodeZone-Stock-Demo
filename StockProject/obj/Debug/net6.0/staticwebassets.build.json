@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F3tr0zwLl5yBc3bemr3FgHEV9NKmCEvd21IS7gJ+0T8=",
+  "Hash": "emr9/NGdr2MZISjVivWNhnjj9se2FWqThFxQmFyUmHM=",
   "Source": "StockProject",
   "BasePath": "_content/StockProject",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\CodeZone\\StockProject\\StockProject\\wwwroot\\images\\Store.jpeg",
+      "SourceId": "StockProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CodeZone\\StockProject\\StockProject\\wwwroot\\",
+      "BasePath": "_content/StockProject",
+      "RelativePath": "images/Store.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Store.jpeg"
     },
     {
       "Identity": "C:\\CodeZone\\StockProject\\StockProject\\wwwroot\\js\\site.js",
